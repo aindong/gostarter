@@ -1,6 +1,9 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"gostarter/utils"
+)
 
 var name string = "Leo"
 
@@ -108,6 +111,9 @@ func main() {
 	fmt.Println(multiple)
 
 	printName()
+	sayQuote()
+
+	fmt.Println("Using the utils package:", utils.Add(2, 3))
 }
 
 func getTheMultipleOf(x int, y int) int {
