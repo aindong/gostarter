@@ -142,6 +142,13 @@ func main() {
 	users = append(users, User{"Leo", "Tech", 21})
 	users = append(users, User{"Leo 2", "Tech 2", 22})
 
+	var user3 = User{
+		firstName: "Leo 3",
+		lastName:  "Tech 3",
+		age:       23,
+	}
+	users = append(users, user3)
+
 	for _, user := range users {
 		fmt.Println(user.firstName)
 	}
