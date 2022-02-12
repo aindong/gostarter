@@ -1,14 +1,20 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"sync"
+	"time"
+)
 
-var name string = "Leo"
+// var name string = "Leo"
 
 type User struct {
 	firstName string
 	lastName  string
 	age       uint
 }
+
+var wg = sync.WaitGroup{}
 
 func main() {
 	// Declaring Variables
@@ -153,6 +159,19 @@ func main() {
 		fmt.Println(user.firstName)
 	}
 
+	wg.Add(1)
+	go sendEmail()
+
+	wg.Wait()
+}
+
+func sendEmail() {
+	fmt.Println("Sending email")
+	// Delay the function
+	time.Sleep(time.Second * 10)
+
+	fmt.Println("Email sent")
+	wg.Done()
 }
 
 // func getTheMultipleOf(x int, y int) int {
