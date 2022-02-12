@@ -1,11 +1,14 @@
 package main
 
-import (
-	"fmt"
-	"gostarter/utils"
-)
+import "fmt"
 
 var name string = "Leo"
+
+type User struct {
+	firstName string
+	lastName  string
+	age       uint
+}
 
 func main() {
 	// Declaring Variables
@@ -107,39 +110,48 @@ func main() {
 	// 	}
 	// }
 
-	multiple := getTheMultipleOf(2, 3)
-	fmt.Println(multiple)
+	// multiple := getTheMultipleOf(2, 3)
+	// fmt.Println(multiple)
 
-	printName()
-	sayQuote()
+	// printName()
+	// sayQuote()
 
-	fmt.Println("Using the utils package:", utils.Add(2, 3))
+	// fmt.Println("Using the utils package:", utils.Add(2, 3))
 
-	// Maps
-	var user = make(map[string]string)
-	user["firstName"] = "Leo"
-	user["lastName"] = "Tech"
+	// // Maps
+	// var user = make(map[string]string)
+	// user["firstName"] = "Leo"
+	// user["lastName"] = "Tech"
 
-	fmt.Println(user)
+	// fmt.Println(user)
 
-	// list of users
-	var users = make([]map[string]string, 0)
-	users = append(users, user)
+	// // list of users
+	// var users = make([]map[string]string, 0)
+	// users = append(users, user)
 
-	var user2 = make(map[string]string)
-	user2["firstName"] = "Leo 2"
-	user2["lastName"] = "Tech 2"
-	users = append(users, user2)
+	// var user2 = make(map[string]string)
+	// user2["firstName"] = "Leo 2"
+	// user2["lastName"] = "Tech 2"
+	// users = append(users, user2)
+
+	// for _, user := range users {
+	// 	fmt.Println(user["firstName"])
+	// }
+
+	var users = make([]User, 0)
+	users = append(users, User{"Leo", "Tech", 21})
+	users = append(users, User{"Leo 2", "Tech 2", 22})
 
 	for _, user := range users {
-		fmt.Println(user["firstName"])
+		fmt.Println(user.firstName)
 	}
+
 }
 
-func getTheMultipleOf(x int, y int) int {
-	return x * y
-}
+// func getTheMultipleOf(x int, y int) int {
+// 	return x * y
+// }
 
-func printName() {
-	fmt.Println(name)
-}
+// func printName() {
+// 	fmt.Println(name)
+// }
