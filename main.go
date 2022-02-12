@@ -2,6 +2,8 @@ package main
 
 import "fmt"
 
+var name string = "Leo"
+
 func main() {
 	// Declaring Variables
 	// var name = "Alleo"
@@ -104,8 +106,14 @@ func main() {
 
 	multiple := getTheMultipleOf(2, 3)
 	fmt.Println(multiple)
+
+	printName()
 }
 
 func getTheMultipleOf(x int, y int) int {
 	return x * y
+}
+
+func printName() {
+	fmt.Println(name)
 }
