@@ -76,30 +76,36 @@ func main() {
 	// fmt.Println("You have", totalFriends, "friends")
 
 	// Slices
-	var futureFriends []string
-	futureFriends = append(futureFriends, "foo1")
-	futureFriends = append(futureFriends, "foo2")
+	// var futureFriends []string
+	// futureFriends = append(futureFriends, "foo1")
+	// futureFriends = append(futureFriends, "foo2")
 
-	fmt.Println(futureFriends)
+	// fmt.Println(futureFriends)
 
-	// Loops
-	for i := 0; i < len(futureFriends); i++ {
-		fmt.Println(futureFriends[i])
-	}
+	// // Loops
+	// for i := 0; i < len(futureFriends); i++ {
+	// 	fmt.Println(futureFriends[i])
+	// }
 
-	// iterate over a slice
-	// blank identifier "_" is used to ignore the value
-	for i, friend := range futureFriends {
-		fmt.Println(i, friend)
-	}
+	// // iterate over a slice
+	// // blank identifier "_" is used to ignore the value
+	// for i, friend := range futureFriends {
+	// 	fmt.Println(i, friend)
+	// }
 
-	// Count to 10
-	for i := 0; i <= 10; i++ {
-		fmt.Print(i)
+	// // Count to 10
+	// for i := 0; i <= 10; i++ {
+	// 	fmt.Print(i)
 
-		if i >= 0 && i < 10 {
-			fmt.Print(" ")
-		}
-	}
+	// 	if i >= 0 && i < 10 {
+	// 		fmt.Print(" ")
+	// 	}
+	// }
 
+	multiple := getTheMultipleOf(2, 3)
+	fmt.Println(multiple)
+}
+
+func getTheMultipleOf(x int, y int) int {
+	return x * y
 }
