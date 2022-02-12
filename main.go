@@ -88,6 +88,7 @@ func main() {
 	}
 
 	// iterate over a slice
+	// blank identifier "_" is used to ignore the value
 	for i, friend := range futureFriends {
 		fmt.Println(i, friend)
 	}
