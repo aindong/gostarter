@@ -70,4 +70,15 @@ func main() {
 	// another way to declare an array
 	var friends2 = [3]string{"foo", "bar", "baz"}
 	fmt.Println(friends2) // Priting array
+
+	// print size of array
+	const totalFriends = len(friends) + len(friends2)
+	fmt.Println("You have", totalFriends, "friends")
+
+	// Slices
+	var futureFriends []string
+	futureFriends = append(futureFriends, "foo1")
+	futureFriends = append(futureFriends, "foo2")
+
+	fmt.Println(futureFriends)
 }
