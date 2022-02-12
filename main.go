@@ -87,6 +87,11 @@ func main() {
 		fmt.Println(futureFriends[i])
 	}
 
+	// iterate over a slice
+	for i, friend := range futureFriends {
+		fmt.Println(i, friend)
+	}
+
 	// Count to 10
 	for i := 0; i <= 10; i++ {
 		fmt.Print(i)
