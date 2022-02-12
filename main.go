@@ -61,19 +61,19 @@ func main() {
 	// fmt.Println("Hello", input, ", good luck on learning GO!")
 
 	// Arrays
-	var friends [3]string
-	friends[0] = "foo"
-	friends[1] = "bar"
-	friends[2] = "baz"
-	fmt.Println(friends) // Priting array
+	// var friends [3]string
+	// friends[0] = "foo"
+	// friends[1] = "bar"
+	// friends[2] = "baz"
+	// fmt.Println(friends) // Priting array
 
-	// another way to declare an array
-	var friends2 = [3]string{"foo", "bar", "baz"}
-	fmt.Println(friends2) // Priting array
+	// // another way to declare an array
+	// var friends2 = [3]string{"foo", "bar", "baz"}
+	// fmt.Println(friends2) // Priting array
 
-	// print size of array
-	const totalFriends = len(friends) + len(friends2)
-	fmt.Println("You have", totalFriends, "friends")
+	// // print size of array
+	// const totalFriends = len(friends) + len(friends2)
+	// fmt.Println("You have", totalFriends, "friends")
 
 	// Slices
 	var futureFriends []string
@@ -81,4 +81,19 @@ func main() {
 	futureFriends = append(futureFriends, "foo2")
 
 	fmt.Println(futureFriends)
+
+	// Loops
+	for i := 0; i < len(futureFriends); i++ {
+		fmt.Println(futureFriends[i])
+	}
+
+	// Count to 10
+	for i := 0; i <= 10; i++ {
+		fmt.Print(i)
+
+		if i >= 0 && i < 10 {
+			fmt.Print(" ")
+		}
+	}
+
 }
