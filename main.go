@@ -114,6 +114,26 @@ func main() {
 	sayQuote()
 
 	fmt.Println("Using the utils package:", utils.Add(2, 3))
+
+	// Maps
+	var user = make(map[string]string)
+	user["firstName"] = "Leo"
+	user["lastName"] = "Tech"
+
+	fmt.Println(user)
+
+	// list of users
+	var users = make([]map[string]string, 0)
+	users = append(users, user)
+
+	var user2 = make(map[string]string)
+	user2["firstName"] = "Leo 2"
+	user2["lastName"] = "Tech 2"
+	users = append(users, user2)
+
+	for _, user := range users {
+		fmt.Println(user["firstName"])
+	}
 }
 
 func getTheMultipleOf(x int, y int) int {
